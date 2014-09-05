@@ -11,5 +11,4 @@ Syntax highlighting for SublimeText2 of IUT's pseudo-code, using AAAPackageDev.
 
 ##How to setup the pseudo-code-syntax-highlighting support?
 * Go to `Menu` > `SublimeText2` > `Preferences` > `Browse packages...`
-* Go to the folder `User`
-* Put the `.tmlanguage` file here.
+* Put the `.tmlanguage` file on the `User` folder.

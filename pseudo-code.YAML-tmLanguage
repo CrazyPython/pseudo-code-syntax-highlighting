@@ -1,0 +1,53 @@
+# [PackageDev] target_format: plist, ext: tmlanguage
+---
+name: pseudo-code
+scopeName: source.pseudo-code
+fileTypes: [psc, pscode]
+uuid: 9b70ed3b-a554-42f5-b736-ecd13dc00b36
+
+patterns:
+- match: \b(tableau_de( [0-9]*)? caractere)\b
+  name: invalid.illegal
+- match: //(.*)
+  name: comment
+- match: \"(?:\\.|[^"\\])*\"
+  name: string.quoted
+- match: \'(?:\\.|[^'\\]){1}\'
+  name: constant.character
+- match: ('\\u[0-9]{4}')
+  name: constant.character
+- match: \b(vrai|faux)\b
+  name: constant.boolean
+- match: \b(constante)\b
+  name: constant
+
+- match: (\(|\))
+  name: invalid.deprecated
+- match: (;)
+  name: keyword.control.endline
+- match: \b(algorithme|debut|fin)\b
+  name: keyword.control.algorithm
+- match: \b(si|sinon|fsi)\b
+  name: keyword.control.conditions
+- match: \b(afficher|saisir|ligne_suivante)\b
+  name: keyword.control.io
+- match: \b(declarer|taille|allonger|redimensionner)\b
+  name: keyword.control.memory
+- match: \b(modulo|rand)\b
+  name: keyword.control.maths
+
+- match: \b(ET|ET_ALORS|OU|OU_SINON)\b
+  name: keyword.operator.binary
+- match: (NON)\b
+  name: keyword.operator.unary
+- match: \b(vaut|ne_vaut_pas)\b
+  name: keyword.operator.identity
+- match: (\.?)(-?)([0-9]+)(e?)
+  name: constant.numeric
+- match: (<-|>=|<=|>|<|\+|-|/|\*)
+  name: keyword.operator.binary
+
+- match: \b(booleen|reel|entier|entier_naturel|caractere)\b
+  name: support.type.primitive
+- match: \b(tableau_de|string)\b
+  name: support.type.complex

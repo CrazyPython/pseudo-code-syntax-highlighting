@@ -73,9 +73,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(si|sinon|fsi)\b</string>
+			<string>\b(si|sinon|sinon_si|fsi)\b</string>
 			<key>name</key>
-			<string>keyword.control.conditions</string>
+			<string>keyword.control.condition</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(choix_sur|cas|fchoix|entre)\b</string>
+			<key>name</key>
+			<string>keyword.control.choice</string>
 		</dict>
 		<dict>
 			<key>match</key>

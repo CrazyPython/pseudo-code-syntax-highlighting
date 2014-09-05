@@ -27,8 +27,10 @@ patterns:
   name: keyword.control.endline
 - match: \b(algorithme|debut|fin)\b
   name: keyword.control.algorithm
-- match: \b(si|sinon|fsi)\b
-  name: keyword.control.conditions
+- match: \b(si|sinon|sinon_si|fsi)\b
+  name: keyword.control.condition
+- match: \b(choix_sur|cas|fchoix|entre)\b
+  name: keyword.control.choice
 - match: \b(afficher|saisir|ligne_suivante)\b
   name: keyword.control.io
 - match: \b(declarer|taille|allonger|redimensionner)\b

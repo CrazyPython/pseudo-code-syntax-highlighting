@@ -15,3 +15,15 @@ declarer MaString : string;
 MaString <- "lol";
 MaString0 <- 'p';
 afficher(MaString);//Affiche pol
+
+declarer MonChar : caractere;
+saisir(MonChar);
+
+choix_sur MonChar entre
+	cas 'c':
+		afficher("Bonjour monsieur C.");
+	cas 'd':
+		afficher("Bonjour twa!");
+	cas '!':
+		afficher("Lol !");
+fchoix

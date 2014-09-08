@@ -55,15 +55,27 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(in|out|in_out|renvoie)\b</string>
+			<key>name</key>
+			<string>constant.parameter.type</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(descendant|ascendant)\b</string>
+			<key>name</key>
+			<string>entity.attribute</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(\(|\))</string>
 			<key>name</key>
 			<string>invalid.deprecated</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(;)</string>
+			<string>(;|,)</string>
 			<key>name</key>
-			<string>keyword.control.endline</string>
+			<string>keyword.control.separator</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -85,6 +97,24 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(sortie|continue|repeter|jusqua|faire|ffaire)\b</string>
+			<key>name</key>
+			<string>keyword.control.loop.control</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(boucle|fboucle|jusqua|tant_que)\b</string>
+			<key>name</key>
+			<string>keyword.control.loop</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(pour|variant_de|a)\b</string>
+			<key>name</key>
+			<string>keyword.control.loop.for</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b(afficher|saisir|ligne_suivante)\b</string>
 			<key>name</key>
 			<string>keyword.control.io</string>
@@ -103,6 +133,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(fonction|procedure|)\b</string>
+			<key>name</key>
+			<string>keyword.control.method</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b(ET|ET_ALORS|OU|OU_SINON)\b</string>
 			<key>name</key>
 			<string>keyword.operator.binary</string>
@@ -118,6 +154,12 @@
 			<string>\b(vaut|ne_vaut_pas)\b</string>
 			<key>name</key>
 			<string>keyword.operator.identity</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>([a-zA-Z_])([0-9]+)(e?)</string>
+			<key>name</key>
+			<string>blank</string>
 		</dict>
 		<dict>
 			<key>match</key>

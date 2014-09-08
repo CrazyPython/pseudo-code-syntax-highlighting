@@ -20,23 +20,35 @@ patterns:
   name: constant.boolean
 - match: \b(constante)\b
   name: constant
+- match: \b(in|out|in_out|renvoie)\b
+  name: constant.parameter.type
+- match: \b(descendant|ascendant)\b
+  name: entity.attribute
 
 - match: (\(|\))
   name: invalid.deprecated
-- match: (;)
-  name: keyword.control.endline
+- match: (;|,)
+  name: keyword.control.separator
 - match: \b(algorithme|debut|fin)\b
   name: keyword.control.algorithm
 - match: \b(si|sinon|sinon_si|fsi)\b
   name: keyword.control.condition
 - match: \b(choix_sur|cas|fchoix|entre)\b
   name: keyword.control.choice
+- match: \b(sortie|continue|repeter|jusqua|faire|ffaire)\b
+  name: keyword.control.loop.control
+- match: \b(boucle|fboucle|jusqua|tant_que)\b
+  name: keyword.control.loop
+- match: \b(pour|variant_de|a)\b
+  name: keyword.control.loop.for
 - match: \b(afficher|saisir|ligne_suivante)\b
   name: keyword.control.io
 - match: \b(declarer|taille|allonger|redimensionner)\b
   name: keyword.control.memory
 - match: \b(modulo|rand)\b
   name: keyword.control.maths
+- match: \b(fonction|procedure|)\b
+  name: keyword.control.method
 
 - match: \b(ET|ET_ALORS|OU|OU_SINON)\b
   name: keyword.operator.binary
@@ -44,6 +56,8 @@ patterns:
   name: keyword.operator.unary
 - match: \b(vaut|ne_vaut_pas)\b
   name: keyword.operator.identity
+- match: ([a-zA-Z_])([0-9]+)(e?)
+  name: blank
 - match: (\.?)(-?)([0-9]+)(e?)
   name: constant.numeric
 - match: (<-|>=|<=|>|<|\+|-|/|\*)

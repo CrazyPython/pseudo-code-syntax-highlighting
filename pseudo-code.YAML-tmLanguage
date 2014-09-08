@@ -24,6 +24,8 @@ patterns:
   name: constant.parameter.type
 - match: \b(descendant|ascendant)\b
   name: entity.attribute
+- match: \b(sortie|continue)\b
+  name: entity.loop
 
 - match: (\(|\))
   name: invalid.deprecated
@@ -35,7 +37,7 @@ patterns:
   name: keyword.control.condition
 - match: \b(choix_sur|cas|fchoix|entre)\b
   name: keyword.control.choice
-- match: \b(sortie|continue|repeter|jusqua|faire|ffaire)\b
+- match: \b(repeter|jusqua|faire|ffaire)\b
   name: keyword.control.loop.control
 - match: \b(boucle|fboucle|jusqua|tant_que)\b
   name: keyword.control.loop

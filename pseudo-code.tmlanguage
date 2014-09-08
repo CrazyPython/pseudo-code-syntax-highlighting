@@ -67,6 +67,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(sortie|continue)\b</string>
+			<key>name</key>
+			<string>entity.loop</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(\(|\))</string>
 			<key>name</key>
 			<string>invalid.deprecated</string>
@@ -97,7 +103,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(sortie|continue|repeter|jusqua|faire|ffaire)\b</string>
+			<string>\b(repeter|jusqua|faire|ffaire)\b</string>
 			<key>name</key>
 			<string>keyword.control.loop.control</string>
 		</dict>
